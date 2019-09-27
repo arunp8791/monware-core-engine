@@ -10,3 +10,7 @@ steps:
   commands:
   - npm install
   - npm test
+  
+trigger:
+  branch:
+  - master
