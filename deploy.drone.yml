@@ -1,11 +1,14 @@
----
 kind: pipeline
 type: docker
 name: default
 
 steps:
-- name: greeting
-  image: golang:1.12
+- name: build
+  image: golang
   commands:
   - go build
   - go test
+
+trigger:
+  branch:
+  - master
