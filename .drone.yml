@@ -1,10 +1,12 @@
 kind: pipeline
-type: docker
 name: default
 
 steps:
-- name: build
-  image: golang
+- name: test
+  image: node
+  commands:
+  - npm install
+  - npm test
 
 trigger:
   branch:
